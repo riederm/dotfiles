@@ -1,0 +1,20 @@
+[user]
+	email = mathias.rieder@gmail.com
+	name = Mathias Rieder
+[core]
+	editor = vim
+	# Don't consider trailing space change as a cause for merge conflicts
+	whitespace = -trailing-space
+[alias]
+	lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	# Undo last commit but keep changed files in stage
+	uncommit = reset --soft HEAD~1
+	# Remove file(s) from Git but not from disk
+	untrack = rm --cache --
+
+[color]
+	# Enable colors in color-supporting terminals
+	ui = auto
+[push]
+	# Default push should only push the current branch to its push target, regardless of its remote name
+	default = upstream
